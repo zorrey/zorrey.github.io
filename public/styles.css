@@ -282,6 +282,7 @@ hr{
         flex-wrap: wrap;
         border-radius: 10px;
         margin: 15px 10%;
+        transition: 0.5s;
         }    
     }
 @media screen and (min-width:700px){
@@ -338,6 +339,7 @@ hr{
     flex-direction: column;
     height: min-content;
     justify-content: space-around;
+    transition: 0.5s;
     }    
 }
 @media only screen and (max-height:600px),(max-width:800px){
@@ -356,6 +358,7 @@ hr{
     flex-direction: column;
     height: min-content;
     justify-content: space-around;
+    transition: 0.5s;
     }    
     }
 
