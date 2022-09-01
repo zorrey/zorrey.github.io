@@ -17,10 +17,14 @@ body{
     background: rgb(53, 51, 55);
     color:beige;    
 }
-.container{    
+.container{ 
+    padding: 0px;   
     display: flex;
     flex-direction: column;   
 } 
+ul{
+    padding: 0px;
+}
 
 ul li  {  
     padding: 0px;  
@@ -132,12 +136,12 @@ nav ul li a:hover::after {
     padding: 15px;
     display: block;
     position: fixed;
-    top:50px;
+    top:55px;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(224, 107, 107, 0.6);
     font-size: large;
     width: 130px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 100px);
     line-height: 280%;
     
 }
@@ -422,7 +426,7 @@ hr{
     bottom: 25px;
     right: 0px;
     height: 100px;
-    padding-right: 30px;
+    padding: 0px 30px;
     padding-top: 20px;
 }
 #footer-list{
