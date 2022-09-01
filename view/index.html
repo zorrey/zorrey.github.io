@@ -264,18 +264,32 @@
             }   
         }
         function toggleFooterList(){
-            if(menuList.classList.contains('show')){                
-                menuList.style.height = "calc(100vh - 200px)";  
+            if(menuList.classList.contains('show') && !footerList.classList.contains("show-footer")){                
+                menuList.style.height = "calc(100vh - 195px)";  
+                menuList.classList.toggle('show');           
                 menuList.classList.toggle('show');           
                 document.getElementById("footer-list").classList.toggle('show-footer');            
         }
-            else{
+            else if(menuList.classList.contains('show') && footerList.classList.contains("show-footer")){
+                menuList.style.height = "calc(100vh - 100px)";  
+                menuList.classList.toggle('show');           
+                menuList.classList.toggle('show');           
                 document.getElementById("footer-list").classList.toggle('show-footer'); 
             } 
+            else document.getElementById("footer-list").classList.toggle('show-footer'); 
                   
+        }
+        function checkWin(){
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            if(w>700){
+              menuList.classList.remove("show");
+              footerList.classList.remove("show-footer");
+        }
         }
         menuButton.addEventListener('click' , toggleList);
         footerButton.addEventListener('click' , toggleFooterList);   
+        window.addEventListener('resize', checkWin);
 
     </script>
 </body>

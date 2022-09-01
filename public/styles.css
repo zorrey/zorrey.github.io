@@ -307,6 +307,9 @@ hr{
     #ham-footer{
         display: block;
     }
+    #footer-list.show-footer{
+        display:block;
+    }
     #menu-item  .nav{
         display: none;
     }
@@ -426,7 +429,6 @@ hr{
 #footer-list.show-footer{
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.7);
-    display: block;
     position: fixed;
     bottom: 25px;
     right: 0px;
