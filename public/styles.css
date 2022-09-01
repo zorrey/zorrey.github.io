@@ -25,7 +25,10 @@ body{
 ul{
     padding: 0px;
 }
-
+/* a {
+    text-decoration: none;
+    text-decoration-style: none;
+} */
 ul li  {  
     padding: 0px;  
     margin: 0px;
@@ -216,25 +219,58 @@ margin: 15px 0;
     margin: 5% 15px;
     width: 200px;
     height: 300px;
-    background:linear-gradient(to bottom, white, rgb(250, 247, 247)); 
-    box-shadow: rgb(194, 192, 192) 5px 5px;   
+    box-shadow: rgb(194, 192, 192) 5px 5px;  
+    color:black; 
     transition: 0.5s;
 }
-.project-tile a{
-   color: black; 
+#filter a{
+   color: white; 
+   text-decoration: none;
 }
-.project-tile:hover{
-   background: white;
-   transform: scale(1.05);
-   /* padding: 5px;  */
+#filter a:hover{
+   color: white; 
+   text-decoration: none;
+}
+/* .project-tile:hover{
+    background: white; 
+   transform: scale(1.05);   
+} */
+#filter{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(25,25,25,0.5), rgba(105, 13, 13, 0.8));
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.5s;
 }
 
-#project-pic{
+.project-tile img{
     border-radius: 8px;
     width: 100%;
     height:80%; 
-    overflow: hidden;  
+    overflow: hidden; 
+    transition: transform 0.5s; 
 }
+.project-tile:hover img{
+  transform: scale(1.05);
+   
+}
+.project-tile:hover #filter{
+ height: 100%;
+   
+}
+
+
 hr{
     margin: 8px 0;
 }
@@ -269,6 +305,12 @@ hr{
     display:block ;
 }
 .card-3{
+    display: none;
+}
+.card-4.active-c{
+    display:block ;
+}
+.card-4{
     display: none;
 }
 
