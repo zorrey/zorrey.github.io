@@ -103,6 +103,7 @@ nav ul li a:hover::after {
 }
 
 .logo{
+    color:white;
     width: 120px;
     height: calc(var(--navBar) - 2 * var(padding));
     margin: 5px 10px
@@ -139,7 +140,7 @@ nav ul li a:hover::after {
     right: 0;
     background-color: rgba(0, 0, 0, 0.6);
     font-size: large;
-    width: 130px;
+    width: 125px;
     height: calc(100vh - 100px);
     line-height: 280%;
     transition: 0.5s;
@@ -427,12 +428,12 @@ hr{
     color:bisque;
 }
 #footer-list.show-footer{
-    border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     bottom: 25px;
     right: 0px;
     height: 100px;
+    width: 125px;
     padding: 0px 30px;
     padding-top: 20px;
     transition: 0.5s;
