@@ -29,7 +29,7 @@
                     <img id="menu" src="../pictures/01 copy.gif"/> 
             </button>
             </div>
-            <ul id ="menu-column">
+            <ul id ="menu-column" >
                 <li><a class="nav" href="#welcome-section">WELCOME</a></li>
                 <li><a class="nav" href="#about">   ABOUT </a></li>
                 <li><a  class="nav" href="#projects"> PROJECTS</a> </li>  
@@ -91,7 +91,7 @@
                     </li>
                     <li>MSc Architecture.
                         </br>
-                        Course in MSc Urban Planning, University College Dublin, Ireland </li>                  
+                        Course in MSc Urban Planning.</li>                  
                 </ul>               
             </div>            
           </div>  
@@ -205,7 +205,7 @@
             </div><!-- end project card 3-->          
                         
         </section> <!--  end projects -->
-        <script  src="../public/index.js"></script>
+        <!-- <script  src="../public/index.js"></script> -->
        <!--  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
     
 <!-- ------------------------ FOOTER --------------------------------->
@@ -218,14 +218,14 @@
         <div id="profile">
             <a class="author" id="profile-link" href="https://codepen.io/Zory" target="_blank">Zory St</a>
             <a class="author" id="profile-link"  href="https://www.freecodecamp.org/Zory" target="_blank">
-                 my freeCodeCamp profile page
+                 my freeCodeCamp profile
                 </a>
         </div>                          
         </div>    
     <div>
         <ul id="footer-list">
             <li><a class="author"  href="https://codepen.io/Zory" target="_blank">Zory St</a></li>
-            <li><a class="author"   href="https://www.freecodecamp.org/Zory" target="_blank">my freeCodeCamp profile page</a></li>
+            <li><a class="author"   href="https://www.freecodecamp.org/Zory" target="_blank">my freeCodeCamp profile</a></li>
         </ul>                  
     </div> 
     <button id="ham-footer"> LINKS</button>
@@ -251,17 +251,32 @@
         }
         const menuButton = document.getElementById("ham");  
         const footerButton = document.getElementById("ham-footer");  
+        const menuList = document.getElementById("menu-column"); 
+        const footerList = document.getElementById("footer-list");
 
-        function toggleList(){
-                  
-            const menuList = document.getElementById("menu-column");        
-            menuList.classList.toggle('show');            
+        function toggleList(){  
+            if(footerList.classList.contains('show-footer')){ 
+                menuList.style.height = "calc(100vh - 200px)";    
+                menuList.classList.toggle('show');      
+            }   else{
+                menuList.style.height = "calc(100vh - 100px)";    
+                menuList.classList.toggle('show'); 
+            }   
         }
         function toggleFooterList(){
-           document.getElementById("footer-list").classList.toggle('show-footer');        
+            if(menuList.classList.contains('show')){                
+                menuList.style.height = "calc(100vh - 200px)";  
+                menuList.classList.toggle('show');           
+                document.getElementById("footer-list").classList.toggle('show-footer');            
+        }
+            else{
+                document.getElementById("footer-list").classList.toggle('show-footer'); 
+            } 
+                  
         }
         menuButton.addEventListener('click' , toggleList);
-        footerButton.addEventListener('click' , toggleFooterList) ;
+        footerButton.addEventListener('click' , toggleFooterList);   
+
     </script>
 </body>
 </html>
