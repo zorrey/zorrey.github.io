@@ -104,7 +104,7 @@ nav ul li a:hover::after {
 }
 
 .logo{
-    color:white;
+    background-color: white;
     width: 120px;
     height: calc(var(--navBar) - 2 * var(padding));
     margin: 5px 10px;
