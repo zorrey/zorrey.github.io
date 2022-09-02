@@ -348,6 +348,7 @@
     </footer> 
 </div> <!-- end wrapper-->    
     <script>
+        var w, h;
         var links = document.getElementsByClassName("links")
         var contents = document.getElementsByClassName("contents");
         
@@ -396,12 +397,15 @@
                   
         }
         function checkWin(){
-            let w = window.innerWidth;
-            let h = window.innerHeight;
+             w = window.innerWidth;
+             h = window.innerHeight;
             if(w>700){
               menuList.classList.remove("show");
               footerList.classList.remove("show-footer");
-        }
+            }
+            if(w<700){
+                toggleList;
+            }
         }
         menuButton.addEventListener('click' , toggleList);
         footerButton.addEventListener('click' , toggleFooterList);   
