@@ -422,8 +422,7 @@
             if(menuList.classList.contains('show') && !footerList.classList.contains("show-footer")){                
                 menuList.style.height = `${h - 195}px`; 
                 toggleList;          
-                document.getElementById("footer-list").classList.add('show-footer'); 
-                setTimeout()           
+                footerList.classList.add('show-footer');      
         }
             else if(menuList.classList.contains('show') && footerList.classList.contains("show-footer")){
                 menuList.style.height = `${h - 100}px`;  
@@ -449,8 +448,7 @@
         footerButton.addEventListener('click' , toggleFooterList);   
         window.addEventListener('resize', checkWin);
         window.addEventListener('resize', handleList);
-
-
+        
     </script>
 </body>
 </html>
