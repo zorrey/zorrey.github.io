@@ -56,11 +56,12 @@
 <!-- ------------------------ ABOUT --------------------------->
       
         <section id ="about">
-            <div class="nav">   </div>
-            <h2 class="presentation" >
+            <div class="container">
+                <h2 class="presentation" >
                 <p id="pr">My name is Zornitsa S. </p>
                 <p id="pr">I am passionate designer and developer.</p> 
             </h2>
+            </div>            
           <div class="container"> 
             <nav id="row"> 
                 <ul class="titles">
@@ -371,30 +372,51 @@
         const menuList = document.getElementById("menu-column"); 
         const footerList = document.getElementById("footer-list");
 
-        function toggleList(){  
+        function toggleList(){ 
+            w = window.innerWidth;
+            h = window.innerHeight;
+            if(h<300){
+                footerList.style.right = "125px";
+                toggleFooterList;
+                menuList.style.height = `${h-100}px`;    
+                menuList.classList.toggle('show'); 
+            }
+            else{
+            console.log("w-h", w ,h) 
             if(footerList.classList.contains('show-footer')){ 
-                menuList.style.height = "calc(100vh - 195px)";    
+                menuList.style.height = `${h-195}px`;    
                 menuList.classList.toggle('show');      
             }   else{
-                menuList.style.height = "calc(100vh - 100px)";    
+                menuList.style.height = `${h-100}px`;    
                 menuList.classList.toggle('show'); 
-            }   
+            }   }
         }
         function toggleFooterList(){
+
+            w = window.innerWidth;
+             h = window.innerHeight;
+             console.log("w-h", w ,h);
+
+            if(h<300){
+                footerList.style.right = "125px";
+                footerList.classList.toggle('show-footer'); ;
+
+            } 
+            else{
+                footerList.style.right = "0px"  ;
             if(menuList.classList.contains('show') && !footerList.classList.contains("show-footer")){                
-                menuList.style.height = "calc(100vh - 195px)";  
-                menuList.classList.toggle('show');           
-                menuList.classList.toggle('show');           
+                menuList.style.height = `${h - 195}px`; 
+                toggleList;          
                 document.getElementById("footer-list").classList.toggle('show-footer');            
         }
             else if(menuList.classList.contains('show') && footerList.classList.contains("show-footer")){
-                menuList.style.height = "calc(100vh - 100px)";  
+                menuList.style.height = `${h - 100}px`;  
                 menuList.classList.toggle('show');           
                 menuList.classList.toggle('show');           
                 document.getElementById("footer-list").classList.toggle('show-footer'); 
             } 
             else document.getElementById("footer-list").classList.toggle('show-footer'); 
-                  
+                 }
         }
         function checkWin(){
              w = window.innerWidth;

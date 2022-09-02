@@ -136,9 +136,10 @@ nav ul li a:hover::after {
 }
 #menu-column {
     display: none;
+    height:0;
 }
 #menu-column.show li{
-margin: 15px 0;
+margin: 5px 0;
 }
 #menu-column.show  {
     padding: 15px;
@@ -149,7 +150,6 @@ margin: 15px 0;
     background-color: rgba(0, 0, 0, 0.6);
     font-size: large;
     width: 125px;
-    height: calc(100vh - 100px);
     transition: 0.5s;
     
 }
@@ -372,11 +372,9 @@ hr{
    
     #about{ 
         height: 100vh;
-        display: grid;
-        grid-template-rows: 100px 100px auto;
-        margin:5% 25%;
-        overflow:hidden;
+        margin: 5% 25%;
     }
+    
     #projects{     
     display: flex;
     flex-direction: column;
@@ -389,10 +387,7 @@ hr{
   
     #about{ 
     height: min-content;
-    display: grid;
-    grid-template-rows: 100px 100px  auto;
     margin:5% 10%;
-    overflow:hidden;
     }
    
     #projects{   
@@ -407,7 +402,10 @@ hr{
 
 
 /* ----------------------ABOUT-------------------------------------- */
-
+#about{
+    display: flex;
+    flex-direction: column;
+}
 .indent{
     margin-left: 8%;
 }
@@ -456,6 +454,7 @@ hr{
 }
 
 .presentation {
+    margin-top: 100px;
     color:beige;
     font-size: x-large;
     align-items:center;
