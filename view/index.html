@@ -422,13 +422,14 @@
             if(menuList.classList.contains('show') && !footerList.classList.contains("show-footer")){                
                 menuList.style.height = `${h - 195}px`; 
                 toggleList;          
-                document.getElementById("footer-list").classList.toggle('show-footer');            
+                document.getElementById("footer-list").classList.add('show-footer'); 
+                setTimeout()           
         }
             else if(menuList.classList.contains('show') && footerList.classList.contains("show-footer")){
                 menuList.style.height = `${h - 100}px`;  
                 menuList.classList.toggle('show');           
                 menuList.classList.toggle('show');           
-                document.getElementById("footer-list").classList.toggle('show-footer'); 
+                document.getElementById("footer-list").classList.remove('show-footer'); 
             } 
             else document.getElementById("footer-list").classList.toggle('show-footer'); 
                  }
