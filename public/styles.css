@@ -291,24 +291,32 @@ hr{
     font-size: larger;
 }
 .card-1.active-c{
+    opacity: 1;
     display:block ;
+    
+
 }
 .card-1{
+    animation: fadeIn 1s;
     display: none;
 }
 .card-2.active-c{
+    animation: fadeIn 1s;
     display:block ;
 }
 .card-2{
+    
     display: none;
 }
 .card-3.active-c{
+    animation: fadeIn 1s;
     display:block ;
 }
 .card-3{
     display: none;
 }
 .card-4.active-c{
+    animation: fadeIn 1s;
     display:block ;
 }
 .card-4{
@@ -526,5 +534,14 @@ color:coral;
     align-items: center;
     padding: 5px;
 }
+/* -----------------------animation---------------------------------- */
+@keyframes fadeIn {
+    from {
+         opacity: 0;
+    }
 
+    to {
+         opacity: 1;
+    }
+}
 
