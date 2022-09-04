@@ -58,7 +58,7 @@
         <section id ="about">
             <div class="container">
                 <h2 class="presentation" >
-                <p id="pr">My name is Zornitsa S. </p>
+                <p id="pr">My name is Zory </p>
                 <p id="pr">I am passionate designer and developer.</p> 
             </h2>
             </div>            
@@ -100,7 +100,7 @@
 <!-- ----------------------------- PROJECTS --------------------------->
 
         <section id="projects">
-            <h1 class="projects"> My Projects </h1>  
+            <h2 class="projects"> MY PROJECTS </h2>  
             <div id="card-1" class="card-1 active-c">
                 <div id="p-card" >             
                 <div  class="project-tile">                   
@@ -363,9 +363,12 @@
              event.target.classList.add("active");
              document.getElementById(name).classList.add("active-list");
         }
+        /*-----------------change project page--------------------------------------------*/
         function openPCard(cardNum, prev){
-            document.getElementById(prev).classList.remove("active-c") ;  
-            document.getElementById(cardNum).classList.add("active-c");                    
+
+            document.getElementById(prev).classList.add("turnOff") ; 
+           setTimeout(()=>{ document.getElementById(prev).classList.remove("active-c", "turnOff")}, 500 ); 
+           setTimeout (()=>{document.getElementById(cardNum).classList.add("active-c")},500);                    
         }
         const menuButton = document.getElementById("ham");  
         const footerButton = document.getElementById("ham-footer");  

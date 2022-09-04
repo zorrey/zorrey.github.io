@@ -291,32 +291,44 @@ hr{
     font-size: larger;
 }
 .card-1.active-c{
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
     opacity: 1;
     display:block ;
     
 
 }
+.card-1.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
 .card-1{
     display: none;
 }
 .card-2.active-c{
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
     display:block ;
+}
+.card-2.active-c.turnOff{
+    animation:fadeOut 0.5s;
 }
 .card-2{
     display: none;
 }
 .card-3.active-c{
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
     display:block ;
+}
+.card-3.active-c.turnOff{
+    animation:fadeOut 0.5s;
 }
 .card-3{
     display: none;
 }
 .card-4.active-c{
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1s;
     display:block ;
+}
+.card-4.active-c.turnOff{
+    animation:fadeOut 0.5s;
 }
 .card-4{
     display: none;
@@ -536,7 +548,7 @@ color:coral;
 /* -----------------------animation---------------------------------- */
 @keyframes fadeIn {
     from {
-         opacity: 0.5;
+         opacity: 0;
     }
 
     to {
@@ -549,7 +561,7 @@ color:coral;
     }
 
     to {
-         opacity: 0.5;
+         opacity: 0.1;
     }
 }
 
