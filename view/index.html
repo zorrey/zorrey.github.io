@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+   <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
              integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -16,9 +16,9 @@
 <div id="wraper">
 <!-- ------------------------ HEADER  --------------------------->
     <section id="header" >  
-            <div class="overlay"></div>              
+           <!--  <div class="overlay"></div>     -->          
             <nav id="navbar">
-            <a href="#header"><img src="../pictures/logo03-1.jpg" class="logo"></a> 
+            <a href="#header"><img src="../pictures/logo03-1.gif" class="logo"></a> 
             <div class="navbar"> 
             <ul id ="menu-item">
                 <li><a class="nav" href="#welcome-section">WELCOME</a></li>
@@ -35,14 +35,11 @@
                 <li><a  class="nav" href="#projects"> PROJECTS </a> </li>  
             </ul>
             </nav>
-            
+      <!--       
         <div id="header-text">             
             <h2> Hi, I'm Zory.</h2>
             <p> Front-end / Back-end Developer </p>
-        </div>
-        <div id="header-proj">
-          <!--   <iframe width="60%" height="400px" src="https://sudoku.zorrey.repl.co"></iframe>    -->      
-        </div>
+        </div> -->
         
     </section>  <!-- end header -->    
 
@@ -52,20 +49,33 @@
             <h1 class="welcome">
             MY PORTFOLIO
             </h1>
+            <div id="header-text">             
+                <h2> Hi, I'm Zory.</h2>
+                <p> Front-end / Back-end Developer </p>
+            </div>
             <ul class="continue">
-            <li><a href="#projects" class="presentation">Continue</a></li>                </ul> 
-            </section>                
+            <li><a href="#projects" class="presentation">Continue</a></li>                
+            </ul> 
+               <!--  iFRAME
+                <iframe frameborder="0" width="40%" height="800px" src="https://sudoku.zorrey.repl.co?embed=true"></iframe>  -->  
+            
+        </section>                
       	         
 <!-- ------------------------ ABOUT --------------------------->
       
         <section id ="about">
-            <div class="container">
-                <h2 class="presentation" >
-                <p id="pr">My name is Zory </p>
-                <p id="pr">I am passionate designer and developer.</p> 
-            </h2>
-            </div>            
-          <div class="container"> 
+            <div id="row">
+                <img class="author" src="../pictures/pic07-p.jpg" alt="author" > 
+                <div class="container">
+                    <h2 class="presentation" >
+                    <p id="pr">My name is Zory </p>
+                    <p id="pr">I am passionate designer and developer.</p> 
+                </h2>
+                </div> 
+                 
+            </div>
+                  
+          <div class="container mid"> 
             <nav id="row"> 
                 <ul class="titles">
                     <li class="links active" onclick="openlist('skills')">Skills</li>
@@ -120,346 +130,393 @@
 <!-- ----------------------------- PROJECTS --------------------------->
 
         <section id="projects">
-            <h2 class="projects"> MY PROJECTS </h2>  
-            <div id="card-1" class="card-1 active-c">
-                <div id="p-card" >             
-                <div  class="project-tile">                   
-                        <img id="project-pic" src="../pictures/Clock.jpg"  alt="25 + 5 Clock"/>
-                        <hr>  25 + 5 Clock
+            
+                <h2 class="projects"> MY PROJECTS </h2>  
+                <span class="data">HTML, CSS, React, Node.js, Express.js, MongoDB database, Mocha, Chai.</span>
+                    <div id="card-1" class="card-1 active-c">
+                        <div id="p-card" >             
+                        <div  class="project-tile a">  
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/sudoku copy.jpg"  alt="Sudoku"/>                                
+                            </div>  <hr>  Sudoku Solver & Generator
+                            <div id="filter">
+                                <a href="https://sudoku.zorrey.repl.co" target="_blank">                    
+                                <hr> 
+                                <h4>JavaScript <br> Sudoku Solver & Generator</h4>
+                                <p> This full stack JavaScript app is built with Node.js, Express.js and React.</p> 
+                                <hr> </a>
+                            </div>     
+                        </div>	
+                        <div class="column">
+                         	
+                        <div  class="project-tile b" > 
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/Ex Tracker.jpg"  alt="Exercise tracker"/>
+                            </div>                                 
+                                <hr>Exercise tracker
+                            <div id="filter">
+                                <a href="https://exercisetracker.zorrey.repl.co" target="_blank">                    
+                                <hr> 
+                                <h4>Exercise tracker</h4>
+                                <p> This full stack JavaScript app is built with Node.js, Express.js,Mongoose-MongoDB database and tested with Mocha and Chai.</p> 
+                                <hr> </a>
+                            </div> 
+                        </div>
+                        <div  class="project-tile b"> 
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/library.jpg"  alt="Personal Library"/>
+                            </div>               
+                            
+                            <hr> Personal Library
+                        <div id="filter">
+                            <a href="https://library-main.zorrey.repl.co" target="_blank">                    
+                            <hr> 
+                            <h4>Personal Library</h4>
+                            <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB database and tested with Mocha and Chai.</p> 
+                            <hr> </a>
+                        </div> 
+                        </div>	 
+                        </div>	                               
+                        </div> 
 
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/GRQWbvd" target="_blank">                    
-                        <hr> 
-                        <h4>JavaScript <br> 25 + 5 Clock</h4>
-                        <p> This App is Front End Development Libraries project built with React.</p> 
-                        <hr> </a>
-                    </div>     
-                </div>					 	
-                <div  class="project-tile" > 
-                        <img id="project-pic" src="../pictures/drumMachine.jpg"  alt="Drum Machine"/>
-                        <hr> Drum Machine                    
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/eYVZXLP" target="_blank">                    
-                        <hr> 
-                        <h4>JavaScript Drum Machine</h4>
-                        <p> This App is Front End Development Libraries project built with React.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	
-                <div  class="project-tile">     
-                        <img id="project-pic" src="../pictures/Choropleth Map.jpg"  alt="Choropleth Map"/>
-                        <hr> Choropleth Map
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/RwQMWge" target="_blank">                    
-                        <hr> 
-                        <h4>Choropleth Map</h4>
-                        <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	
-                <div  class="project-tile" >   
-                        <img id="project-pic" src="../pictures/Quotes.jpg"  alt="Random Quotes"/>
-                        <hr>Quote Machine
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/yLpZZxE" target="_blank">                    
-                        <hr> 
-                        <h4>JavaScript Quote Machine</h4>
-                        <p> This App is Front End Development Libraries project built with React.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	                 
-            </div> 
-            <div class="pr-list">
-                <ul  class="next">
-                   <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-1')">NEXT</a></li>               
-               </ul> 
-           </div>
-            </div><!-- end project card 1 -->
-            <div id="card-2" class="card-2">
-                 <div id="p-card">             
-                <div  class="project-tile">  
-                    <img id="project-pic" src="../pictures/Calculator.jpg"  alt="Calculator"/> 
-                    <hr> Calculator
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/oNEZrNz" target="_blank">                    
-                        <hr> 
-                        <h4>JavaScript Calculator</h4>
-                        <p> This App is Front End Development Libraries project built with React.</p> 
-                        <hr> </a>
-                    </div>             
-                    
-                </div>					 	
-                <div  class="project-tile" >                
-                        <img id="project-pic" src="../pictures/HeatMap.jpg"  alt="Heat Map"/>
-                        <hr> Heat Map
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/jOZzbqO" target="_blank">                    
-                        <hr> 
-                        <h4>Heat Map</h4>
-                        <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	
-                <div  class="project-tile">                
-                        <img id="project-pic" src="../pictures/TreeMapDiagram.jpg"  alt="Treemap Diagram"/>
-                        <hr> Treemap Diagram
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/JjpLYZL"  target="_blank">                    
-                        <hr> 
-                        <h4>Treemap Diagram</h4>
-                        <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	
-                <div  class="project-tile" >                
-                        <img id="project-pic" src="../pictures/Scatterplot Graph.jpg"  alt="Scatterplot Graph"/>
-                        <hr> Scatterplot Graph
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/LYQdVOR"  target="_blank">                    
-                        <hr> 
-                        <h4>Scatterplot Graph</h4>
-                        <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	                 
-            </div> 
-            <div  class="pr-list">
-                <ul id="row" class="next">
-                   <li><a class="btn btn-light" id="next" onclick="openPCard('card-1', 'card-2')">PREVIOUS</a></li>               
-                   <li><a class="btn btn-light" id="prev" onclick="openPCard('card-3', 'card-2')">NEXT</a></li>               
-               </ul> 
-           </div>
-            </div><!-- end project card 2 -->          
-            <div id="card-3" class="card-3">
-                 <div id="p-card">             
-                <div  class="project-tile">                                   
-                        <img id="project-pic" src="../pictures/GDP graph.jpg"  alt="Bar Chart"/>
-                        <hr>  Bar Chart
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/oNEqXLx"  target="_blank">                    
-                        <hr> 
-                        <h4>Bar Chart</h4>
-                        <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
-                        <hr> </a>
-                    </div>
-                </div>					 	
-                <div  class="project-tile" >           
-                        <img id="project-pic" src="../pictures/Previewer.jpg"  alt="Markdown Previewer"/>
-                        <hr> Markdown Previewer
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/jOZbEqN" target="_blank">                    
-                        <hr> 
-                        <h4>JavaScript Markdown Previewer</h4>
-                        <p> This App is Front End Development Libraries project built with React.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	
-                <div  class="project-tile">                
-                        <img id="project-pic" src="../pictures/Metric-ImperialConverter.jpg"  alt="Metric/Imperial Converter
-                        "/>
-                        <hr> Metric/Imperial Converter
-                    <div id="filter">
-                        <a href="https://boilerplate-project-metricimpconverter.zorrey.repl.co/" target="_blank">                    
-                        <hr> 
-                        <h4>Metric/Imperial Converter</h4>
-                        <p> This full stack JavaScript app is built with Node.js, Express.js and tested with Mocha and Chai.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	
-                <div  class="project-tile" >                
-                        <img id="project-pic" src="../pictures/Issue Tracker.jpg"  alt="Issue Tracker"/>
-                        <hr>Issue Tracker
-                    <div id="filter">
-                        <a href="https://issue-tracker.zorrey.repl.co/" target="_blank">                    
-                        <hr> 
-                        <h4>Issue Tracker</h4>
-                        <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB Database and tested with Mocha and Chai.</p> 
-                        <hr> </a>
-                    </div> 
-                </div>	                 
-            </div> 
-            <div  class="pr-list">
-                <ul id="row" class="next">
-                   <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-3')">PREVIOUS</a></li>               
-                   <li><a class="btn btn-light" id="prev" onclick="openPCard('card-4', 'card-3')">NEXT</a></li>                        
-               </ul> 
-           </div>
-            </div><!-- end project card 3-->   
-            
-            <div id="card-4" class="card-4">
-                <div id="p-card">             
-               <div  class="project-tile">                                   
-                       <img id="project-pic" src="../pictures/sudoku.jpg"  alt="Sudoku"/>
-                       <hr>  Sudoku Solver
-                   <div id="filter">
-                       <a href="https://sudoku-solver.zorrey.repl.co/"  target="_blank">                    
-                       <hr> 
-                       <h4>Sudoku Solver</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js and tested with Mocha and Chai.</p> 
-                       <hr> </a>
-                   </div>
-               </div>					 	
-               <div  class="project-tile" >           
-                       <img id="project-pic" src="../pictures/translator.jpg"  alt="Translator"/>
-                       <hr> American / British English Translator
-                   <div id="filter">
-                       <a href="https://American-British-Translator.zorrey.repl.co" target="_blank">                    
-                       <hr> 
-                       <h4>American / British English Translator</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js and tested with Mocha and Chai.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	
-               <div  class="project-tile">                
-                       <img id="project-pic" src="../pictures/library.jpg"  alt="Personal Library"/>
-                       <hr> Personal Library
-                   <div id="filter">
-                       <a href="https://library-main.zorrey.repl.co" target="_blank">                    
-                       <hr> 
-                       <h4>Personal Library</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB database and tested with Mocha and Chai.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	
-               <div  class="project-tile" >                
-                       <img id="project-pic" src="../pictures/Ex Tracker.jpg"  alt="Exercise tracker"/>
-                       <hr>Exercise tracker
-                   <div id="filter">
-                       <a href="https://exercisetracker.zorrey.repl.co" target="_blank">                    
-                       <hr> 
-                       <h4>Exercise tracker</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js,Mongoose-MongoDB database and tested with Mocha and Chai.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	                 
-           </div> 
-           <div  class="pr-list">
-               <ul id="row" class="next">
-                  <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-4')">PREVIOUS</a></li>               
-                  <li><a class="btn btn-light" id="prev" onclick="openPCard('card-5', 'card-4')">NEXT</a></li>               
-              </ul> 
-          </div>
-           </div><!-- end project card 4-->  
-            
-            <div id="card-5" class="card-5">
-                <div id="p-card">             
-                    <div  class="project-tile">                                   
-                        <img id="project-pic" src="../pictures/ZahaHadid.jpg"  alt="Architect Zaha Hadid Tribute Page"/>
-                        <hr>  Architect Zaha Hadid Tribute Page
-                    <div id="filter">
-                        <a href="https://codepen.io/Zory/pen/mdLyNmL"  target="_blank">                    
-                        <hr> 
-                        <h4>Architect Zaha Hadid Tribute Page</h4>
-                        <p> App built with HTML and CSS. </p> 
-                        <hr> </a>
-                    </div>
-                </div>					 	
-               <div  class="project-tile" >           
-                       <!-- <img id="project-pic" src="https://codepen.io/Zory/pen/QWrNQQR"  alt="Landing Page"/> -->
-                       <iframe height="557.6271057128906" style="width: 100%;" scrolling="no" title="Landing  Page - certification project." src="https://codepen.io/Zory/embed/preview/QWrNQQR?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                        See the Pen <a href="https://codepen.io/Zory/pen/QWrNQQR">
-                        Landing  Page - certification project.</a> by Zory (<a href="https://codepen.io/Zory">@Zory</a>)
-                        on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
-                       <hr> Landing  Page - certification project.
-                   <div id="filter">
-                       <a href="https://codepen.io/Zory/pen/QWrNQQR" target="_blank">                    
-                       <hr> 
-                       <h4>Landing  Page - certification project.</h4>
-                       <p> App built with HTML, CSS and JavaScript.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	
-               <div  class="project-tile">                
-                       <!-- <img id="project-pic" src="../pictures/library.jpg"  alt="Personal Library"/> -->
-                       <iframe height="300" style="width: 100%;" scrolling="no" title="Survey Form" src="https://codepen.io/Zory/embed/preview/wvjGjLm?default-tab=result&theme-id=dark" 
-                        frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-                        See the Pen <a href="https://codepen.io/Zory/pen/wvjGjLm">
-                        Survey Form</a> by Zory (<a href="https://codepen.io/Zory">@Zory</a>)
-                        on <a href="https://codepen.io">CodePen</a>.
-                      </iframe>
-                       <hr> Survey Form
-                   <div id="filter">
-                       <a href="https://codepen.io/Zory/pen/wvjGjLm" target="_blank">                    
-                       <hr> 
-                       <h4>Survey Form</h4>
-                       <p> App built with HTML, CSS and JavaScript.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	
-               <div  class="project-tile" >                
-                       <img id="project-pic" src="../pictures/Ex Tracker.jpg"  alt="Exercise tracker"/>
-                       <hr>Exercise tracker
-                   <div id="filter">
-                       <a href="https://exercisetracker.zorrey.repl.co" target="_blank">                    
-                       <hr> 
-                       <h4>Exercise tracker</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js,Mongoose-MongoDB database and tested with Mocha and Chai.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	                 
-           </div> 
-           <div  class="pr-list">
-               <ul id="row" class="next">
-                  <li><a class="btn btn-light" id="next" onclick="openPCard('card-4', 'card-5')">PREVIOUS</a></li>               
-                  <li><a class="btn btn-light" id="prev" onclick="openPCard('card-6', 'card-5')">NEXT</a></li>               
-              </ul> 
-          </div>
-           </div><!-- end project card 5-->  
-            <div id="card-6" class="card-6">
-                <div id="p-card">             
-               <div  class="project-tile">                                   
-                       <img id="project-pic" src="../pictures/ZahaHadid.jpg"  alt="Architect Zaha Hadid Tribute Page"/>
-                       <hr>  Architect Zaha Hadid Tribute Page
-                   <div id="filter">
-                       <a href="https://codepen.io/Zory/pen/mdLyNmL"  target="_blank">                    
-                       <hr> 
-                       <h4>Architect Zaha Hadid Tribute Page</h4>
-                       <p> App built with HTML and CSS. </p> 
-                       <hr> </a>
-                   </div>
-               </div>					 	
-               <div  class="project-tile" >           
-                       <img id="project-pic" src="../pictures/Header Parser.jpg"  alt="Header Parser Microservice"/>
-                       <hr> Header Parser Microservice
-                   <div id="filter">
-                       <a href="https://boilerplate-project-headerparser.zorrey.repl.co/" target="_blank">                    
-                        <hr> 
-                       <h4>Header Parser Microservice</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js and MongoDB database.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	
-               <div  class="project-tile">                
-                       <img id="project-pic" src="../pictures/TimeStamp.jpg"  alt="Timestamp Microservice"/>
-                       <hr> Timestamp Microservice
-                   <div id="filter">
-                       <a href="https://project-timestamp.zorrey.repl.co" target="_blank">                    
-                       <hr> 
-                       <h4>Timestamp Microservice</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB database and Mangoose.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	
-               <div  class="project-tile" >                
-                       <img id="project-pic" src="../pictures/URL Shortener.jpg"  alt="URL Shortener Microservice"/>
-                       <hr>URL Shortener Microservice
-                   <div id="filter">
-                       <a href="https://boilerplate-project-urlshortener.zorrey.repl.co/" target="_blank">                    
-                       <hr> 
-                       <h4>URL Shortener Microservice</h4>
-                       <p> This full stack JavaScript app is built with Node.js, Express.js and Mongoose-MongoDB database.</p> 
-                       <hr> </a>
-                   </div> 
-               </div>	                 
-           </div> 
-           <div  class="pr-list">
-               <ul id="row" class="next">
-                  <li><a class="btn btn-light" id="next" onclick="openPCard('card-5', 'card-6')">PREVIOUS</a></li>               
+                        <div class="pr-list">
+                        <ul  class="next"> 
+                        <li><a class="btn btn-light" id="inv" onclick="openPCard('card-4', 'card-5')">PREVIOUS</a></li>                        
+                        <li><a class="page active" onclick="openPCard('card-1', 'card-1')" >1</a></li>            
+                        <li><a class="page" onclick="openPCard('card-2', 'card-1')">2</a></li>            
+                        <li><a class="page" onclick="openPCard('card-3', 'card-1')">3</a></li>            
+                        <li><a class="page" onclick="openPCard('card-4', 'card-1')">4</a></li>            
+                        <li><a class="page" onclick="openPCard('card-5', 'card-1')">5</a></li>            
+                        <li><a class="page" onclick="openPCard('card-6', 'card-1')">6</a></li>         
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-1')">NEXT</a></li>               
+                        </ul> 
+                        </div>
+                    </div><!-- end project card 1 -->
+
+                    <div id="card-2" class="card-2">
+                      <div id="p-card">  
+                        
+                        <div  class="project-tile a">  
+                            <div class="window a">
+                                <img id="project-pic" src="../pictures/Issue Tracker.jpg"  alt="Issue Tracker""/>  
+                            </div>                            
+                            <hr> Issue Tracker
+                            <div id="filter">
+                                <a href="https://issue-tracker.zorrey.repl.co/" target="_blank">                    
+                                <hr> 
+                                <h4>Issue Tracker</h4>
+                                <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB Database and tested with Mocha and Chai.</p> 
+                                <hr> </a>
+                            </div>                            
+                            </div> 
+                                    
+                        <div class="column">				 	
+                        <div  class="project-tile b" >  
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/Metric-ImperialConverter.jpg"  alt="Metric/Imperial Converter
+                                "/>
+                            </div>              
                                 
-              </ul> 
-          </div>
-           </div><!-- end project card 6-->  
+                                <hr> Heat Map
+                            <div id="filter">
+                                <a href="https://boilerplate-project-metricimpconverter.zorrey.repl.co/" target="_blank">                    
+                                <hr> 
+                                <h4>Heat Map</h4>
+                                
+                                <p> This full stack JavaScript app is built with Node.js, Express.js and tested with Mocha and Chai.</p> 
+                                <hr> </a>
+                            </div> 
+                        </div>	
+                        <div  class="project-tile b" >    
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/translator.jpg"  alt="Translator"/>
+                            </div>       
+                            
+                            <hr> American / British English Translator
+                        <div id="filter">
+                            <a href="https://American-British-Translator.zorrey.repl.co" target="_blank">                    
+                            <hr> 
+                            <h4>American / British English Translator</h4>
+                            <p> This full stack JavaScript app is built with Node.js, Express.js and tested with Mocha and Chai.</p> 
+                            <hr> </a>
+                        </div> 
+                    </div>	
+                    </div>  
+                    </div> 
+                    <div  class="pr-list">
+                        <ul id="row" class="next">
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-1', 'card-2')">PREVIOUS</a></li>  
+                        <li><a class="page" onclick="openPCard('card-1', 'card-2')" >1</a></li>            
+                        <li><a class="page active" onclick="openPCard('card-2', 'card-2')">2</a></li>            
+                        <li><a class="page" onclick="openPCard('card-3', 'card-2')">3</a></li>            
+                        <li><a class="page" onclick="openPCard('card-4', 'card-2')">4</a></li>            
+                        <li><a class="page" onclick="openPCard('card-5', 'card-2')">5</a></li>            
+                        <li><a class="page" onclick="openPCard('card-6', 'card-2')">6</a></li>              
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-2')">NEXT</a></li>               
+                        </ul> 
+                    </div>
+                    </div><!-- end project card 2 -->  
+
+                    <div id="card-3" class="card-3">
+                      <div id="p-card">  
+                        
+                            <div  class="project-tile a">  
+                                <div class="window">
+                                   <img id="project-pic" src="../pictures/Calculator.jpg"  alt="Calculator"/>  
+                                </div>                            
+                            <hr> Calculator
+                            <div id="filter">
+                                <a href="https://codepen.io/Zory/pen/oNEZrNz" target="_blank">                    
+                                <hr> 
+                                <h4>JavaScript Calculator</h4>
+                                <p> This App is Front End Development Libraries project built with React.</p> 
+                                <hr> </a>
+                            </div>                            
+                            </div> 
+                                    
+                        <div class="column">				 	
+                            <div  class="project-tile b" > 
+                                <div class="window">
+                                   <img id="project-pic" src="../pictures/drumMachine.jpg"  alt="Drum Machine"/> 
+                                </div>
+                                    
+                                    <hr> Drum Machine                    
+                                <div id="filter">
+                                    <a href="https://codepen.io/Zory/pen/eYVZXLP" target="_blank">                    
+                                    <hr> 
+                                    <h4>JavaScript Drum Machine</h4>
+                                    <p> This App is Front End Development Libraries project built with React.</p> 
+                                    <hr> </a>
+                                </div> 
+                            </div>		
+                            <div  class="project-tile b" >  
+                                <div class="window">
+                                    <img id="project-pic" src="../pictures/Quotes.jpg"  alt="Random Quotes"/>
+                                </div> 
+                                
+                                <hr>Quote Machine
+                            <div id="filter">
+                                <a href="https://codepen.io/Zory/pen/yLpZZxE" target="_blank">                    
+                                <hr> 
+                                <h4>JavaScript Quote Machine</h4>
+                                <p> This App is Front End Development Libraries project built with React.</p> 
+                                <hr> </a>
+                            </div> 
+                        </div> 
+                        </div>  
+                      </div> 
+                    <div  class="pr-list">
+                        <ul id="row" class="next">
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-3')">PREVIOUS</a></li>    
+                        <li><a class="page" onclick="openPCard('card-1', 'card-3')" >1</a></li>            
+                        <li><a class="page" onclick="openPCard('card-2', 'card-3')">2</a></li>            
+                        <li><a class="page active" onclick="openPCard('card-3', 'card-3')">3</a></li>            
+                        <li><a class="page" onclick="openPCard('card-4', 'card-3')">4</a></li>            
+                        <li><a class="page" onclick="openPCard('card-5', 'card-3')">5</a></li>            
+                        <li><a class="page" onclick="openPCard('card-6', 'card-3')">6</a></li>            
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-4', 'card-3')">NEXT</a></li>               
+                        </ul> 
+                    </div>
+                    </div><!-- end project card 3 -->  
+
+                    <div id="card-4" class="card-4">
+                        <div id="p-card">             
+                        <div  class="project-tile a">  
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/Clock.jpg"  alt="25 + 5 Clock"/>
+                            </div>                   
+                            <hr>  25 + 5 Clock
+                            <div id="filter">
+                                <a href="https://codepen.io/Zory/pen/GRQWbvd" target="_blank">                    
+                                <hr> 
+                                <h4>JavaScript <br> 25 + 5 Clock</h4>
+                                <p> This App is Front End Development Libraries project built with React.</p> 
+                                <hr> </a>
+                            </div>     
+                        </div>    				 	
+                        <div class="column">
+                            <div  class="project-tile b"> 
+                                <div class="window">
+                                   <img id="project-pic" src="../pictures/Choropleth Map.jpg"  alt="Choropleth Map"/> 
+                                </div>                                 
+                                <hr> Choropleth Map
+                            <div id="filter">
+                                <a href="https://codepen.io/Zory/pen/RwQMWge" target="_blank">                    
+                                <hr> 
+                                <h4>Choropleth Map</h4>
+                                <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
+                                <hr> </a>
+                            </div> 
+                            </div>	
+                            <div  class="project-tile b" > 
+                                <div class="window">
+                                    <img id="project-pic" src="../pictures/HeatMap.jpg"  alt="Heat Map"/>
+                                </div>                                     
+                                <hr> Heat Map
+                            <div id="filter">
+                                <a href="https://codepen.io/Zory/pen/jOZzbqO" target="_blank">                    
+                                <hr> 
+                                <h4>Heat Map</h4>
+                                <p> This App is Data Visualization project built with HTML, JavaScript, CSS, and the D3 svg-based visualization library.</p> 
+                                <hr> </a>
+                            </div> 
+                            </div>                            
+                        </div>                    	                 
+                        </div> <!-- end <div id="p-card">  -->
+                        <div  class="pr-list">
+                            <ul id="row" class="next">
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-4')">PREVIOUS</a></li> 
+                            <li><a class="page" onclick="openPCard('card-1', 'card-4')" >1</a></li>            
+                            <li><a class="page" onclick="openPCard('card-2', 'card-4')">2</a></li>            
+                            <li><a class="page" onclick="openPCard('card-3', 'card-4')">3</a></li>            
+                            <li><a class="page active" onclick="openPCard('card-4', 'card-4')">4</a></li>            
+                            <li><a class="page" onclick="openPCard('card-5', 'card-4')">5</a></li>            
+                            <li><a class="page" onclick="openPCard('card-6', 'card-4')">6</a></li>               
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-5', 'card-4')">NEXT</a></li>                        
+                        </ul> 
+                        </div>
+                    </div><!-- end project card 4-->  
+                    
+                    <div id="card-5" class="card-5">
+                        <div id="p-card"> 
+                            <div  class="project-tile a">
+                                <div class="window">
+                                    <img id="project-pic" src="../pictures/portfolio.jpg"  alt="Portfolio site"/>
+                                </div>                                     
+                                <hr>  Portfolio site
+                            <div id="filter">
+                                <a href="#header"  target="_blank">                    
+                                <hr> 
+                                <h4>Portfolio site</h4>
+                                <p> App built with HTML, CSS and JavaScript. </p> 
+                                <hr> </a>
+                            </div>
+                            </div> 
+                            <div class="column">
+                                <div  class="project-tile b">
+                                    <div class="window">
+                                        <img id="project-pic" src="../pictures/ZahaHadid.jpg"  alt="Architect Zaha Hadid Tribute Page"/>
+                                    </div>                                     
+                                    <hr>  Architect Zaha Hadid Tribute Page
+                                <div id="filter">
+                                    <a href="https://codepen.io/Zory/pen/mdLyNmL"  target="_blank">                    
+                                    <hr> 
+                                    <h4>Architect Zaha Hadid Tribute Page</h4>
+                                    <p> App built with HTML and CSS. </p> 
+                                    <hr> </a>
+                                </div>
+                                </div>					 	
+                                <div  class="project-tile b">                
+                                    <div class="window">
+                                        <img id="project-pic" src="../pictures/survey.jpg"  alt="Survey Form"/>
+                                    </div>
+                                    <hr> Survey Form
+                                    <div id="filter">
+                                        <a href="https://codepen.io/Zory/pen/wvjGjLm" target="_blank">                    
+                                        <hr> 
+                                        <h4>Survey Form</h4>
+                                        <p> App built with HTML, CSS and JavaScript.</p> 
+                                        <hr> </a>
+                                    </div> 
+                                </div>	  
+                            </div>  
+
+                         
+                           
+                </div> 
+                <div  class="pr-list">
+                    <ul id="row" class="next">
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-4', 'card-5')">PREVIOUS</a></li>   
+                        <li><a class="page" onclick="openPCard('card-1', 'card-5')" >1</a></li>            
+                        <li><a class="page" onclick="openPCard('card-2', 'card-5')">2</a></li>            
+                        <li><a class="page" onclick="openPCard('card-3', 'card-5')">3</a></li>            
+                        <li><a class="page" onclick="openPCard('card-4', 'card-5')">4</a></li>            
+                        <li><a class="page active" onclick="openPCard('card-5', 'card-5')">5</a></li>            
+                        <li><a class="page" onclick="openPCard('card-6', 'card-5')">6</a></li>             
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-6', 'card-5')">NEXT</a></li>               
+                    </ul> 
+                </div>
+                    </div><!-- end project card 5-->  
+
+                    <div id="card-6" class="card-6">
+                        <div id="p-card">             
+                            <div  class="project-tile a" > 
+                                <div class="window">
+                                    <img id="project-pic" src="../pictures/landingPage.jpg"  alt="Landing Page"/>
+                                  
+                                </div>  
+                                    <hr> Landing  Page - certification project.
+                                <div id="filter">
+                                    <a href="https://codepen.io/Zory/pen/QWrNQQR" target="_blank">                    
+                                    <hr> 
+                                    <h4>Landing  Page - certification project.</h4>
+                                    <p> App built with HTML, CSS and JavaScript.</p> 
+                                    <hr> </a>
+                                </div> 
+                            </div>	
+                            <div class="column">
+                                <div  class="project-tile b" >  
+                                    <div class="window">
+                                        <img id="project-pic" src="../pictures/Header Parser.jpg"  alt="Header Parser Microservice"/>
+                                    </div>         
+                                        
+                                        <hr> Header Parser Microservice
+                                    <div id="filter">
+                                        <a href="https://boilerplate-project-headerparser.zorrey.repl.co/" target="_blank">                    
+                                            <hr> 
+                                        <h4>Header Parser Microservice</h4>
+                                        <p> This full stack JavaScript app is built with Node.js, Express.js and MongoDB database.</p> 
+                                        <hr> </a>
+                                    </div> 
+                                </div>
+                                <div  class="project-tile b" > 
+                                    <div class="window">
+                                        <img id="project-pic" src="../pictures/URL Shortener.jpg"  alt="URL Shortener Microservice"/>
+                                    </div>               
+                                    
+                                        <hr>URL Shortener Microservice
+                                    <div id="filter">
+                                        <a href="https://boilerplate-project-urlshortener.zorrey.repl.co/" target="_blank">                    
+                                        <hr> 
+                                        <h4>URL Shortener Microservice</h4>
+                                        <p> This full stack JavaScript app is built with Node.js, Express.js and Mongoose-MongoDB database.</p> 
+                                        <hr> </a>
+                                    </div> 
+                                </div>	
+                            </div>   					 	
+                    	
+                  <!--   <div  class="project-tile b">                
+                            <img id="project-pic" src="../pictures/TimeStamp.jpg"  alt="Timestamp Microservice"/>
+                            <hr> Timestamp Microservice
+                        <div id="filter">
+                            <a href="https://project-timestamp.zorrey.repl.co" target="_blank">                    
+                            <hr> 
+                            <h4>Timestamp Microservice</h4>
+                            <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB database and Mangoose.</p> 
+                            <hr> </a>
+                        </div> 
+                    </div>	 -->
+               
+                    
+
+                </div> 
+                <div  class="pr-list">
+                    <ul id="row" class="next">
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-5', 'card-6')">PREVIOUS</a></li>   
+                        <li><a class="page" onclick="openPCard('card-1', 'card-6')" >1</a></li>            
+                        <li><a class="page" onclick="openPCard('card-2', 'card-6')">2</a></li>            
+                        <li><a class="page" onclick="openPCard('card-3', 'card-6')">3</a></li>            
+                        <li><a class="page" onclick="openPCard('card-4', 'card-6')">4</a></li>            
+                        <li><a class="page" onclick="openPCard('card-5', 'card-6')">5</a></li>            
+                        <li><a class="page active" onclick="openPCard('card-6', 'card-6')">6</a></li>  
+                        
+                        <li><a class="btn btn-light" id="inv" onclick="openPCard('card-6', 'card-5')">NEXT</a></li>        
+                                        
+                    </ul> 
+                </div>
+                    </div><!-- end project card 6-->     
+            
+  
                         
         </section> <!--  end projects -->
         <!-- <script  src="../public/index.js"></script> -->
@@ -469,20 +526,23 @@
     <footer id="footer">    
         <div id="row">           
         <address class="author">
-            <img id="fcc" alt="FCC" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg">  </br>
-            FCC: Responsive Web Design Certification
+              </br>
+              <a class="author" id="git-link" href="https://github.com/zorrey" target="_blank">Zory's GitHub</a>
         </address>
         <div id="profile">
             <a class="author" id="profile-link" href="https://codepen.io/Zory" target="_blank">Zory St</a>
+            
             <a class="author" id="profile-link"  href="https://www.freecodecamp.org/Zory" target="_blank">
-                 my freeCodeCamp profile
-                </a>
+            <img id="fcc" alt="FCC" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg">    
+            my freeCodeCamp profile
+            </a>
         </div>                          
         </div>    
     <div>
         <ul id="footer-list">
             <li><a class="author"  href="https://codepen.io/Zory" target="_blank">Zory St</a></li>
             <li><a class="author"   href="https://www.freecodecamp.org/Zory" target="_blank">ZS profile</a></li>
+            <li></li>
         </ul>                  
     </div> 
     <button id="ham-footer"> LINKS</button>
@@ -520,13 +580,13 @@
             h = window.innerHeight;
             if(h<300){
                 footerList.style.right = "125px";
-                menuList.style.height = `${h-100}px`;    
+                menuList.style.height = `${h-45}px`;    
                 menuList.classList.add('show');
                 footerList.classList.remove('show-footer');
             }
             if(h>=300 && w<700){
                 footerList.style.right = "0px"; 
-                menuList.style.height = `${h-100}px`;  
+                menuList.style.height = `${h-45}px`;  
                 menuList.classList.add('show');
                 footerList.classList.remove('show-footer');
             }
@@ -537,16 +597,16 @@
             if(h<300){
                 footerList.style.right = "125px";
                 toggleFooterList;
-                menuList.style.height = `${h-100}px`;    
+                menuList.style.height = `${h-45}px`;    
                 menuList.classList.toggle('show'); 
             }
             else{
             console.log("w-h", w ,h) 
             if(footerList.classList.contains('show-footer')){ 
-                menuList.style.height = `${h-195}px`;    
+                menuList.style.height = `${h-140}px`;    
                 menuList.classList.toggle('show');      
             }   else{
-                menuList.style.height = `${h-100}px`;    
+                menuList.style.height = `${h-45}px`;    
                 menuList.classList.toggle('show'); 
             }   }
         }
@@ -563,12 +623,12 @@
             else{
                 footerList.style.right = "0px"  ;
             if(menuList.classList.contains('show') && !footerList.classList.contains("show-footer")){                
-                menuList.style.height = `${h - 195}px`; 
+                menuList.style.height = `${h - 140}px`; 
                 toggleList;          
                 footerList.classList.add('show-footer');      
         }
             else if(menuList.classList.contains('show') && footerList.classList.contains("show-footer")){
-                menuList.style.height = `${h - 100}px`;  
+                menuList.style.height = `${h -45}px`;  
                 menuList.classList.toggle('show');           
                 menuList.classList.toggle('show');           
                 document.getElementById("footer-list").classList.remove('show-footer'); 
