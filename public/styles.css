@@ -526,7 +526,7 @@ a.page.active{
         flex-direction: column;
     }  
     .project-tile.a{ 
-        margin: 0;
+        margin: 5px auto;
         padding: 0;
         width:200px;
         height:200px;
