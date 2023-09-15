@@ -1,15 +1,15 @@
 :root{
-    --welcome: 3em;
+    --welcome: 3.5em;
     --welcome-font-w: 800;
     --welcome-font-str: extra-expanded;
     --header: 1em;
-    --header-font-w: 500;
+    --header-font-w: 400;
     --header-font-str: extra-expanded;
 
 }
 
 .logo{
-    height: 2.2em;
+    height: 2.1em;
     position: fixed;
     left: 10px;  
     padding: 0px;
@@ -31,7 +31,7 @@
    
 }
 #menu-item li {
-    margin-right: 1em;    
+    margin-right: 1.6em;    
     display: inline-block;
 }
 .nav-bar {   
@@ -68,22 +68,32 @@
     flex-direction: column;
     text-align: center;
     height: 100vh;
+    background-color: rgba(0, 0, 0,0.5);
 }
 .welcome{
-    margin-top: 25vh;
+    margin-top: 35vh;
     font-size: var(--welcome);
     font-weight: var(--welcome-font-w);
     font-stretch: var(--welcome-font-str);
-    margin-bottom: 10vh;
 }
-.continue{
-    margin-top: 20vh;
+.header-text{
+    color:antiquewhite ;
+    font-weight: 500;
+}
+.header-text h2{
+    font-size: 1.4em;
+}
+.header-text p{
+    font-size: 0.9em;
 }
 .presentation {
-    margin-top: 30px;
+    margin-top: 1em;
     font-size: 1em;
-    font-weight: 600;
+    font-weight: 400;
     align-items:center;
+}
+.presentation {
+    text-decoration: underline;
 }
 
 @media screen and (max-width:500px){
