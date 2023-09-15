@@ -1,0 +1,270 @@
+/* ------------projects------------------------------------------- */
+
+.projects{
+    margin-top: 65px;
+    margin-bottom: 20px;
+    font-weight: 800 ;
+    font-size:2.8em;
+    text-align: center;
+}
+.data{
+    margin: 0;
+    padding: 0.4em;
+    font-size: 0.8em;
+}
+.space{
+    margin-bottom: 40px;
+}
+/* #projects{
+    background-color: white;
+    color: black;
+} */
+ .canvas{
+    color: black; 
+}
+#projects{     
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    transition: 0.5s;
+    }   
+#p-card {   
+    height: fit-content;
+    display: flex;
+    justify-content:space-evenly;
+    margin: 5px auto;
+}
+
+.project-tile.a{ 
+    border: 1px solid white; 
+    position: relative;
+    margin: 10px 10px;
+    width: 480px;
+    height: 480px;
+    overflow: hidden; 
+    background-color: white;
+    color:rgb(131, 125, 125); 
+    transition: 0.5s;
+    text-align: center;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-tile{ 
+    position: relative;
+    margin: 10px 10px;
+    overflow: hidden; 
+    border: 1px solid white; 
+    transition: 0.5s;
+    text-align: center;
+    width: 230px;
+    height:350px;
+}
+.project-tile.b{ 
+    position: relative;
+    margin: 10px 10px;
+    width: 230px;
+    height:230px;
+    overflow: hidden; 
+    border: 1px solid white; 
+    transition: 0.5s;
+    text-align: center;
+}
+
+#filter a{
+   color: white; 
+   text-decoration: none;
+}
+#filter a:hover{
+   color: white; 
+   text-decoration: none;
+}
+/* .project-tile:hover{
+    background: white; 
+   transform: scale(1.05);   
+} */
+#filter{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(25,25,25,0.7), rgb(42, 34, 34));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: center;
+    transition: height 0.5s;
+}
+#filter p{
+    font-size: 0.7em;
+}
+#filter h4{
+    font-size: 1em;
+}
+.title{
+    text-align: center;
+    align-content: center;
+}
+
+.project-tile iframe{
+    border-radius: 8px;
+    width: 100%;
+    height:75%; 
+    overflow: hidden; 
+    transition: transform 0.5s; 
+}
+.window{
+    padding: 10px;
+    height: 80%;
+    overflow: hidden; 
+    font-size: 0.8em;
+}
+.window.a{
+    padding: 40px;
+    height: 75%;
+    overflow: hidden; 
+}
+.project-tile img{
+    width: 100%;
+    transition: transform 0.5s; 
+} 
+.project-tile:hover iframe{
+  transform: scale(1.05);
+   
+}
+.project-tile:hover img{
+  transform: scale(1.05);
+   
+}
+.project-tile:hover #filter{
+ height: 100%;
+   
+}
+.btn.btn-light{
+padding: 3px;
+}
+
+hr{
+    margin:  0;
+}
+.next{  
+    flex-direction: row;
+    justify-content:center;
+    cursor: pointer;
+    color:white;
+    align-items: center;
+   
+}
+.next li{
+    display: inline-block;
+}
+.next.pr-list.up{
+    display: none;
+}
+#inv{
+    visibility: hidden;
+}
+.pr-list{
+    text-align: center;    
+}
+.next a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 0.7em;
+}
+.card-1.active-c{
+    animation: fadeIn 1s;
+    opacity: 1;
+    display:block ;
+    
+
+}
+.card-1.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
+.card-1{
+    display: none;
+}
+.card-2.active-c{
+    animation: fadeIn 1s;
+    display:block ;
+}
+.card-2.active-c.turnOff{
+    animation:fadeOut 0.5s;
+    animation-fill-mode: forwards;
+}
+.card-2{
+    display: none;
+}
+.card-3.active-c{
+    animation: fadeIn 1s;
+    display:block ;
+}
+.card-3.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
+.card-3{
+    display: none;
+}
+.card-4.active-c{
+    animation: fadeIn 1s;
+    display:block ;
+}
+.card-4.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
+.card-4{
+    display: none;
+}
+.card-5.active-c{
+    animation: fadeIn 1s;
+    display:block ;
+}
+.card-5.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
+.card-5{
+    display: none;
+}
+.card-6.active-c{
+    animation: fadeIn 1s;
+    display:block ;
+}
+.card-6.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
+.card-6{
+    display: none;
+}
+.card-7.active-c{
+    animation: fadeIn 1s;
+    display:block ;
+}
+.card-7.active-c.turnOff{
+    animation:fadeOut 0.5s;
+}
+.card-7{
+    display: none;
+}
+.card-1,.card-2, .card-3, .card-4, .card-5, .card-6, .card-7{
+    margin-top: 0px;
+}
+
+a.page{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 10px;
+}
+a.page.active{
+    color: #b54769;
+}

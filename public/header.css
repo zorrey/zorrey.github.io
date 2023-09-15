@@ -1,0 +1,141 @@
+:root{
+    --welcome: 3em;
+    --welcome-font-w: 800;
+    --welcome-font-str: extra-expanded;
+    --header: 1em;
+    --header-font-w: 500;
+    --header-font-str: extra-expanded;
+
+}
+
+.logo{
+    height: 2.2em;
+    position: fixed;
+    left: 10px;  
+    padding: 0px;
+
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    font-size: var(--header);
+    font-weight: var(--header-font-w);
+    font-stretch: var(--header-font-str);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#menu-column{
+    display: none;
+   
+}
+#menu-item li {
+    margin-right: 1em;    
+    display: inline-block;
+}
+.nav-bar {   
+    position: fixed;
+    justify-content: flex-end;
+}
+
+.nav-bar ul li a::after,  .continue li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: 0.5s;
+}
+.nav-bar ul li a:hover::after,  .continue li a:hover::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color:white;
+    position: absolute;
+}
+
+#menu{
+    background-color: black;
+    height: 1em;
+}
+
+/* ----------welcome---------------------------------------- */
+
+#welcome-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+}
+.welcome{
+    margin-top: 25vh;
+    font-size: var(--welcome);
+    font-weight: var(--welcome-font-w);
+    font-stretch: var(--welcome-font-str);
+    margin-bottom: 10vh;
+}
+.continue{
+    margin-top: 20vh;
+}
+.presentation {
+    margin-top: 30px;
+    font-size: 1em;
+    font-weight: 600;
+    align-items:center;
+}
+
+@media screen and (max-width:500px){
+    
+    .welcome{
+        padding: 0;
+    }
+ 
+    #ham{
+        display: block;
+        padding: 0;
+        margin-right: 10px;
+
+    }
+    
+    #menu-column{
+        margin: 0px;
+        display: none;  
+        opacity: 0;
+        position: absolute;  
+        right: 10px; 
+        top: 0px;   
+        padding: 40px 10px 10px 10px;
+        text-shadow: 1px 2px black;
+        z-index: 1;
+        background-color: rgba(38, 36, 36, 0.8);
+    }
+    .drop-down-menu:hover #menu-column{
+        display: block;
+        opacity: 1;
+        animation: fadeIn 1s;
+        transition: 0.5s;
+    }
+    .drop-down-menu{
+        position: relative;
+        right: 0px;
+        top: 0px;
+       
+    }
+    .drop-down-menu button{
+       background-color: black;
+       width:2em;
+       position: absolute;
+       right: 0;
+       z-index: 2;
+       transition: 0.5s;
+    }
+ 
+    #menu-item  .nav{
+        display: none;
+    }
+    #profile{
+        display: none;
+      }
+}

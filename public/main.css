@@ -1,0 +1,249 @@
+@import './about.css';
+@import './footer.css';
+@import './header.css';
+@import './projects.css';
+
+
+:root{
+    --footerH: 35px;
+    --textColor: antiquewhite;
+    --navBar: 55px;
+    --padding: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;    
+   /*  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+}
+body{
+    background: radial-gradient(rgba(66, 61, 49, 0.9), rgba(0,0,0,1));
+    color:white;  
+    overflow-x: hidden;
+    font-size: 23px;
+}
+.container.mid{
+    margin-top: 0;
+}
+
+ul{
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+    text-decoration-style: none;
+}
+ul li  { 
+    list-style-type: none;
+}
+
+.row{
+    padding: 3px 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3px;
+}
+
+ul li{
+    list-style: none;
+    align-items: center;
+}
+a, button {
+    color:white;
+    text-decoration: none;
+    position: relative;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;   
+    font-size: 0.8;
+}
+
+a:hover {
+    color:white;
+    text-shadow: 1px 1px rgb(196, 191, 191);
+    text-decoration: none;
+    position: relative;
+}
+a:hover::after {
+    color:white;
+    text-shadow: 1px 1px rgb(196, 191, 191);
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+/* ----------------@media----------------------------------------- */
+@media only screen and (max-width:1000px) and (min-width:500px){
+    .column{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    
+    body{
+        font-size: 20px;
+    }
+    #p-card {  
+        height: fit-content;
+        display:flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        margin: 15px 10%;
+        transition: 0.5s;
+        }   
+    .project-tile.a{ 
+        margin: 5px auto;
+        padding: 0;
+        width:400px;
+        height:400px;
+        } 
+    .project-tile.b{ 
+        margin: 10px 10px;
+        padding: 0;
+        width: 190px;
+        height:190px;
+    }   
+    a.page , .next{
+        display: none;
+    }
+    .next{
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .next.pr-list.up{
+        display: block;
+    } 
+    }
+
+@media screen and (min-width:500px){
+
+    #ham{
+        display: none;
+    }
+    #ham-footer{
+        display: none;
+    }
+    #menu-column.show{
+        display: none;
+    }
+  
+    #menu-item {
+        display: block;
+    } 
+
+}
+
+@media screen and (max-width:500px){
+    body{
+        font-size: 18px;
+    }
+    .column{
+        display:contents;
+    }  
+    .project-tile.a{ 
+        margin: 5px auto;
+        padding: 0;
+        width:200px;
+        height:200px;
+    }
+    .project-tile.b{ 
+        margin: 5px auto;
+        padding: 0;
+        width:200px;
+        height:200px;
+    }
+    .row{
+        padding: 3px 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #row-up{
+        flex-wrap: wrap;
+    }
+    img.author{
+        margin: 0px 30px 10px 0; 
+    }
+
+    .container{
+        margin: 0;
+    }
+    a.page , .next{
+        display: none;
+    }
+    .next{
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .next.pr-list.up{
+        display: block;
+    }
+  
+
+}
+
+
+@media screen and (min-height:600px),(min-width:800px){
+   
+    #about{ 
+        height: 100vh;
+        margin: 5% 25%;
+    }    
+ 
+}
+@media only screen and (max-height:600px),(max-width:800px){
+  
+    #about{ 
+    height: min-content;
+    margin:5% 10%;
+    }
+    a.page , .next{
+        display: none;
+    }
+    .next{
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .next.pr-list.up{
+        display: block;
+    }
+      
+    }
+
+@media only screen and (max-width:270px){
+    body{
+        font-size: 12px;
+    }
+}
+/* -----------------------animation---------------------------------- */
+@keyframes fadeIn {
+    from {
+         opacity: 0;
+    }
+
+    to {
+         opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+         opacity: 1;
+    }
+
+    to {
+         opacity: 0;
+    }
+}
+.frame{
+    width: 100%;
+    height: 400px;
+}
+iframe{
+    border-radius: 8px;
+    width: 100%;
+    height:75%; 
+    overflow: hidden; 
+    transition: transform 0.5s; 
+}

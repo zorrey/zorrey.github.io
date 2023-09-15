@@ -1,0 +1,80 @@
+
+/* ----------------------ABOUT-------------------------------------- */
+#about{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#row-up{
+    margin-top: 95px;
+    padding: 3px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.indent{
+    margin-left: 8%;
+}
+
+.links{
+    cursor: pointer;
+    position: relative;
+    font-size: 1.1em;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline;
+}
+.links::after{
+    content: "";
+    width:0;
+    height: 3px;
+    background: crimson;
+    cursor: pointer;
+    position: absolute;
+    left:0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.links.active::after{
+    width: 100%;
+}
+.contents ul li{
+    list-style: none;
+    line-height:calc(150%);
+    font-size: 0.9em;
+}
+.contents ul li span{
+    color: #b54769;
+    font-size:1.1em;
+    line-height: 150%;
+}
+
+.contents{
+    display: none;
+}
+
+.contents ul{
+    display: flex;
+    flex-direction: column;
+}
+.contents.active-list{
+    display: block;
+}
+.profile{
+    margin-top: 1em;
+    font-size: 1em;
+    line-height: calc(160%);
+    font-weight: 350;
+}
+
+
+a.presentation{
+    color:white;
+}
+
+img.author-photo{
+    width:113px;
+    height:157px;
+    margin: 0px 80px 0px 0;
+}

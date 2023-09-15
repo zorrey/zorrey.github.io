@@ -9,39 +9,41 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
              integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../public/styles.css">
+    <link rel="stylesheet" href="../public/main.css">
     <title>Zory's Portfolio</title>
 </head>
-<body>
-<div id="wraper">
+<body> 
+<div id="wrapper">
 <!-- ------------------------ HEADER  --------------------------->
-    <section id="header" >  
+    <div id="header">  
            <!--  <div class="overlay"></div>     -->          
-            <nav id="navbar">
+           
             <a href="#header"><img src="../pictures/logo03-1.gif" class="logo"></a> 
-            <div class="navbar"> 
-            <ul id ="menu-item">
-                <li><a class="nav" href="#welcome-section">WELCOME</a></li>
-                <li><a class="nav" href="#about">   ABOUT </a></li>
-                <li><a  class="nav" href="#projects"> PROJECTS</a> </li>  
-            </ul>
-            <button id="ham" class="header">
-                    <img id="menu" src="../pictures/01 copy.gif"/> 
-            </button>
+            <div class="nav-bar"> 
+                <div class="drop-down-menu">
+                    <button id="ham">
+                        <img id="menu" src="../pictures/01 copy.gif"/> 
+                    </button>   
+                    <ul id ="menu-column" class="menu-column">
+                        <li><a class="nav" href="#welcome-section">WELCOME</a></li>
+                        <li><a class="nav" href="#about"> ABOUT </a></li>
+                        <li><a class="nav" href="#projects"> PROJECTS </a> </li>  
+                    </ul>  
+                </div>
+                            
+               
+                <ul id ="menu-item">
+                    <li><a class="nav" href="#welcome-section">WELCOME</a></li>
+                    <li><a class="nav" href="#about">   ABOUT </a></li>
+                    <li><a  class="nav" href="#projects"> PROJECTS</a> </li>  
+                </ul>
+           
+            
             </div>
-            <ul id ="menu-column" >
-                <li><a class="nav" href="#welcome-section">WELCOME</a></li>
-                <li><a class="nav" href="#about"> ABOUT </a></li>
-                <li><a  class="nav" href="#projects"> PROJECTS </a> </li>  
-            </ul>
-            </nav>
-      <!--       
-        <div id="header-text">             
-            <h2> Hi, I'm Zory.</h2>
-            <p> Front-end / Back-end Developer </p>
-        </div> -->
         
-    </section>  <!-- end header -->    
+  
+        
+        </div>  <!-- end header -->    
 
 <!-- ------------------------ WELCOME -------------------------------->
 
@@ -54,7 +56,7 @@
                 <p> Front-end / Back-end Developer </p>
             </div>
             <ul class="continue">
-            <li><a href="#projects" class="presentation">Continue</a></li>                
+            <li><a href="#projects" class="presentation">Continue to projects </a></li>                
             </ul> 
                <!--  iFRAME
                 <iframe frameborder="0" width="40%" height="800px" src="https://sudoku.zorrey.repl.co?embed=true"></iframe>  -->  
@@ -64,19 +66,16 @@
 <!-- ------------------------ ABOUT --------------------------->
       
         <section id ="about">
-            <div id="row_up">
-                <img class="author" src="../pictures/pic07-p.jpg" alt="author" > 
-                <div class="container">
-                    <h2 class="presentation" >
-                    <p id="pr">My name is Zory </p>
-                    <p id="pr">I am passionate designer and developer.</p> 
-                </h2>
-                </div> 
-                 
+            <div id="row-up">
+                <img class="author-photo" src="../pictures/pic07-p.jpg" alt="author" > 
+                    <h2 class="profile" >
+                    My name is Zory <br>
+                    I am passionate designer and developer.
+                    </h2>                 
             </div>
                   
           <div class="container mid"> 
-            <nav id="row"> 
+            <nav class="row"> 
                 <ul class="titles">
                     <li class="links active" onclick="openlist('skills')">Skills</li>
                     <li class="links" onclick="openlist('edu')">Education</li>
@@ -86,7 +85,7 @@
                 <ul>
                     <li><span>UI/UX</span> </br> Web/App interfaces</li>
                     <li><span>Web Development</span> <br>Web app development</li>                    
-                    <li><span>Coding</span> <br>HTML, CSS, JavaScript, C++, C#, Python</li>                    
+                    <li><span>Coding</span> <br>HTML, CSS, JavaScript, C#, Python</li>                    
                     <li><span>Design</span> <br>Adobe Photoshop, 3DS MAX, ArchiCAD, AutoCAD, Revit</li>                    
                 </ul>
             </div>
@@ -104,11 +103,11 @@
                         <li>- Quality Assurance</li>
                         <li>- Scientific Computing with Python</li>
                         <li>- Relational Database</li>
-                        <li>- Legacy Information Security and Quality Assurance</li>
+                        <li>- Information Security and Quality Assurance</li>
                         </ul>
                         FreeCodeCamp Developer Certification, representing approximately 1800 hours of coursework:
                         <ul class="indent">
-                        <li>- Legacy Full Stack </li>
+                        <li>- Full Stack </li>
 
                         </ul>
                     </li>
@@ -130,66 +129,40 @@
 
         <section id="projects">
             
-                <h2 class="projects"> MY PROJECTS </h2>  
+                <h2 class="projects"> PROJECTS </h2>  
                 <span class="data">HTML, CSS, Node.js, Express.js, MongoDB database.</span>
 
                     <div id="card-1" class="card-1 active-c">
-                        
+                        <ul  class="next pr-list up"> 
+                        <li><a class="btn btn-light" id="inv" onclick="openPCard('card-6', 'card-7')">PREVIOUS</a></li>  
+                        <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-1')">NEXT</a></li>      
+                        </ul>
                         <div id="p-card" >             
-                        <div  class="project-tile a">  
-                            <div class="window">
-                                <img id="project-pic" src="../pictures/Z-library.jpg"  alt="Zory's Library"/>                                
-                            </div>  <hr>  Zory's Library
-                            <div id="filter">
-                                <a href="https://zorys-library.zorrey.repl.co/" target="_blank">                    
-                                <hr> 
-                                <h4>JavaScript <br> Zory's Library</h4>
-                                <p>  This full stack JavaScript app is built with Node.js, Express.js, Mongoose-MongoDB database</p> 
-                                <hr> </a>
-                            </div>     
-                        </div>	
-                        <div  class="project-tile a">  
-                            <div class="window">
-                                <img id="project-pic" src="../pictures/Message-board.jpg"  alt="Agora Forum"/>                                
-                            </div>  <hr> Agora Forum
-                            <div id="filter">
-                                <a href="https://message-board.zorrey.repl.co/" target="_blank">                    
-                                <hr> 
-                                <h4>JavaScript <br> Agora Forum</h4>
-                                <p>  This full stack JavaScript app is built with Node.js, Express.js, Mongoose-MongoDB database</p> 
-                                <hr> </a>
-                            </div>     
-                        </div>	
-                        <div class="column">
-                         	
-                <!--         <div  class="project-tile b" > 
-                            <div class="window">
-                                <img id="project-pic" src="../pictures/Ex Tracker.jpg"  alt="Exercise tracker"/>
-                            </div>                                 
-                                <hr>Exercise tracker
-                            <div id="filter">
-                                <a href="https://exercisetracker.zorrey.repl.co" target="_blank">                    
-                                <hr> 
-                                <h4>Exercise tracker</h4>
-                                <p> This full stack JavaScript app is built with Node.js, Express.js,Mongoose-MongoDB database and tested with Mocha and Chai.</p> 
-                                <hr> </a>
-                            </div> 
-                        </div>
-                        <div  class="project-tile b"> 
-                            <div class="window">
-                                <img id="project-pic" src="../pictures/library.jpg"  alt="Personal Library"/>
-                            </div>               
-                            
-                            <hr> Personal Library
-                        <div id="filter">
-                            <a href="https://library-main.zorrey.repl.co" target="_blank">                    
-                            <hr> 
-                            <h4>Personal Library</h4>
-                            <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB database and tested with Mocha and Chai.</p> 
-                            <hr> </a>
-                        </div> 
-                        </div>	  -->
-                        </div>	                               
+                            <div  class="project-tile a">  
+                                <div class="window">
+                                    <img id="project-pic" src="../pictures/sudoku copy.jpg"  alt="Sudoku"/>                                                                  
+                                </div>  <hr> <div class="title">Sudoku Solver & Generator</div> 
+                                <div id="filter">
+                                    <a href="https://sudoku.zorrey.repl.co" target="_blank">                    
+                                        <hr> 
+                                        <h4>JavaScript <br> Sudoku Solver & Generator</h4>
+                                        <p> This full stack JavaScript app is built with Node.js, Express.js and React.</p> 
+                                        <hr> 
+                                    </a>
+                                </div>     
+                            </div>	
+                            <div  class="project-tile a">  
+                                <div class="window">
+                                    <img id="project-pic" src="../pictures/Message-board.jpg"  alt="Agora Forum"/>                                
+                                </div>  <hr><div class="title"> Agora Forum</div>
+                                <div id="filter">
+                                    <a href="https://message-board.zorrey.repl.co/" target="_blank">                    
+                                    <hr> 
+                                    <h4>JavaScript <br> Agora Forum</h4>
+                                    <p>  This full stack JavaScript app is built with Node.js, Express.js, Mongoose-MongoDB database</p> 
+                                    <hr> </a>
+                                </div>     
+                            </div>                                        
                         </div> 
 
                         <div class="pr-list">
@@ -207,27 +180,44 @@
                         </div>
 
                     </div><!-- end project card 1 -->
+
                     <div id="card-2" class="card-2">
+                        <ul  class="next pr-list up"> 
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-1', 'card-2')">PREVIOUS</a></li>  
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-2')">NEXT</a></li>      
+                        </ul>
                         <div id="p-card" >             
                         <div  class="project-tile a">  
                             <div class="window">
-                                <img id="project-pic" src="../pictures/sudoku copy.jpg"  alt="Sudoku"/>                                
-                            </div>  <hr>  Sudoku Solver & Generator
+                                <img id="project-pic" src="../pictures/pathfinding.jpg"  alt="Pathfinding App"/>                                 
+                            </div>  <hr>  <div class="title">Pathfinder </div>
                             <div id="filter">
-                                <a href="https://sudoku.zorrey.repl.co" target="_blank">                    
-                                <hr> 
-                                <h4>JavaScript <br> Sudoku Solver & Generator</h4>
-                                <p> This full stack JavaScript app is built with Node.js, Express.js and React.</p> 
-                                <hr> </a>
+                                <a href="https://pathfinding.zorrey.repl.co/" target="_blank">                    
+                                    <hr> 
+                                    <h4>JavaScript <br> Pathfinder</h4>
+                                    <p>  This JavaScript app is built with React</p> 
+                                    <hr> </a>                               
                             </div>     
                         </div>	
+               
                         <div class="column">
-                         	
+                                 <div  class="project-tile b">  
+                            <div class="window">
+                                <img id="project-pic" src="../pictures/Z-library.jpg"  alt="Zory's Library"/>                                 
+                            </div>  <hr> <div class="title">Zory's Library </div>  
+                            <div id="filter">
+                                <a href="https://zorys-library.zorrey.repl.co/" target="_blank">                    
+                                    <hr> 
+                                    <h4>JavaScript <br> Zory's Library</h4>
+                                    <p>  This full stack JavaScript app is built with Node.js, Express.js, Mongoose-MongoDB database</p> 
+                                    <hr> </a>                               
+                            </div>     
+                        </div>	 	
                         <div  class="project-tile b" > 
                             <div class="window">
                                 <img id="project-pic" src="../pictures/Ex Tracker.jpg"  alt="Exercise tracker"/>
                             </div>                                 
-                                <hr>Exercise tracker
+                                <hr><div class="title">Exercise tracker</div>
                             <div id="filter">
                                 <a href="https://exercisetracker.zorrey.repl.co" target="_blank">                    
                                 <hr> 
@@ -236,20 +226,7 @@
                                 <hr> </a>
                             </div> 
                         </div>
-               <!--          <div  class="project-tile b"> 
-                            <div class="window">
-                                <img id="project-pic" src="../pictures/library.jpg"  alt="Personal Library"/>
-                            </div>               
-                            
-                            <hr> Personal Library
-                        <div id="filter">
-                            <a href="https://library-main.zorrey.repl.co" target="_blank">                    
-                            <hr> 
-                            <h4>Personal Library</h4>
-                            <p> This full stack JavaScript app is built with Node.js, Express.js, MongoDB database and tested with Mocha and Chai.</p> 
-                            <hr> </a>
-                        </div> 
-                        </div>	 --> 
+         
                         </div>	                               
                         </div> 
 
@@ -269,13 +246,16 @@
                     </div><!-- end project card 2 -->
 
                     <div id="card-3" class="card-3">
-                      <div id="p-card">  
-                        
+                        <ul  class="next pr-list up"> 
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-3')">PREVIOUS</a></li>  
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-4', 'card-3')">NEXT</a></li>      
+                        </ul> 
+                        <div id="p-card">                          
                         <div  class="project-tile a">  
                             <div class="window a">
                                 <img id="project-pic" src="../pictures/Issue Tracker.jpg"  alt="Issue Tracker""/>  
                             </div>                            
-                            <hr> Issue Tracker
+                            <hr> <div class="title">Issue Tracker</div> 
                             <div id="filter">
                                 <a href="https://issue-tracker.zorrey.repl.co/" target="_blank">                    
                                 <hr> 
@@ -292,7 +272,7 @@
                                 "/>
                             </div>              
                                 
-                                <hr> Metric/Imperial Converter
+                                <hr> <div class="title">Metric/Imperial Converter</div>
                             <div id="filter">
                                 <a href="https://boilerplate-project-metricimpconverter.zorrey.repl.co/" target="_blank">                    
                                 <hr> 
@@ -307,7 +287,7 @@
                                 <img id="project-pic" src="../pictures/translator.jpg"  alt="Translator"/>
                             </div>       
                             
-                            <hr> American / British English Translator
+                            <hr> <div class="title">American / British English Translator</div>
                         <div id="filter">
                             <a href="https://American-British-Translator.zorrey.repl.co" target="_blank">                    
                             <hr> 
@@ -319,7 +299,7 @@
                     </div>  
                     </div> 
                     <div  class="pr-list">
-                        <ul id="row" class="next">
+                        <ul class="next">
                         <li><a class="btn btn-light" id="next" onclick="openPCard('card-2', 'card-3')">PREVIOUS</a></li>  
                         <li><a class="page" onclick="openPCard('card-1', 'card-3')" >1</a></li>            
                         <li><a class="page" onclick="openPCard('card-2', 'card-3')">2</a></li>            
@@ -334,13 +314,16 @@
                     </div><!-- end project card 3 -->  
 
                     <div id="card-4" class="card-4">
+                        <ul  class="next pr-list up"> 
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-4')">PREVIOUS</a></li>  
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-5', 'card-4')">NEXT</a></li>      
+                        </ul>  
                       <div id="p-card">  
-                        
                             <div  class="project-tile a">  
                                 <div class="window">
                                    <img id="project-pic" src="../pictures/Calculator.jpg"  alt="Calculator"/>  
                                 </div>                            
-                            <hr> Calculator
+                            <hr> <div class="title">Calculator</div>
                             <div id="filter">
                                 <a href="https://codepen.io/Zory/full/oNEZrNz" target="_blank">                    
                                 <hr> 
@@ -356,7 +339,7 @@
                                    <img id="project-pic" src="../pictures/drumMachine.jpg"  alt="Drum Machine"/> 
                                 </div>
                                     
-                                    <hr> Drum Machine                    
+                                    <hr><div class="title"> Drum Machine  </div>                  
                                 <div id="filter">
                                     <a href="https://codepen.io/Zory/full/eYVZXLP" target="_blank">                    
                                     <hr> 
@@ -370,7 +353,7 @@
                                     <img id="project-pic" src="../pictures/Quotes.jpg"  alt="Random Quotes"/>
                                 </div> 
                                 
-                                <hr>Quote Machine
+                                <hr><div class="title">Quote Machine</div>
                             <div id="filter">
                                 <a href="https://codepen.io/Zory/full/yLpZZxE" target="_blank">                    
                                 <hr> 
@@ -382,7 +365,7 @@
                         </div>  
                       </div> 
                     <div  class="pr-list">
-                        <ul id="row" class="next">
+                        <ul class="next">
                         <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-4')">PREVIOUS</a></li>    
                         <li><a class="page" onclick="openPCard('card-1', 'card-4')" >1</a></li>            
                         <li><a class="page" onclick="openPCard('card-2', 'card-4')">2</a></li>            
@@ -396,13 +379,17 @@
                     </div>
                     </div><!-- end project card 3 -->  
 
-                    <div id="card-5" class="card-5">
-                        <div id="p-card">             
+                    <div id="card-5" class="card-5"> 
+                        <ul  class="next pr-list up"> 
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-3', 'card-5')">PREVIOUS</a></li>  
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-6', 'card-5')">NEXT</a></li>      
+                        </ul> 
+                        <div id="p-card">                 
                         <div  class="project-tile a">  
                             <div class="window">
                                 <img id="project-pic" src="../pictures/Clock.jpg"  alt="25 + 5 Clock"/>
                             </div>                   
-                            <hr>  25 + 5 Clock
+                            <hr> <div class="title">25 + 5 Clock</div> 
                             <div id="filter">
                                 <a href="https://codepen.io/Zory/full/GRQWbvd" target="_blank">                    
                                 <hr> 
@@ -416,7 +403,7 @@
                                 <div class="window">
                                    <img id="project-pic" src="../pictures/Choropleth Map.jpg"  alt="Choropleth Map"/> 
                                 </div>                                 
-                                <hr> Choropleth Map
+                                <hr> <div class="title">Choropleth Map</div>
                             <div id="filter">
                                 <a href="https://codepen.io/Zory/full/RwQMWge" target="_blank">                    
                                 <hr> 
@@ -429,7 +416,7 @@
                                 <div class="window">
                                     <img id="project-pic" src="../pictures/HeatMap.jpg"  alt="Heat Map"/>
                                 </div>                                     
-                                <hr> Heat Map
+                                <hr><div class="title">Heat Map</div> 
                             <div id="filter">
                                 <a href="https://codepen.io/Zory/full/jOZzbqO" target="_blank">                    
                                 <hr> 
@@ -441,7 +428,7 @@
                         </div>                    	                 
                         </div> <!-- end <div id="p-card">  -->
                         <div  class="pr-list">
-                            <ul id="row" class="next">
+                            <ul class="next">
                             <li><a class="btn btn-light" id="next" onclick="openPCard('card-4', 'card-5')">PREVIOUS</a></li> 
                             <li><a class="page" onclick="openPCard('card-1', 'card-5')" >1</a></li>            
                             <li><a class="page" onclick="openPCard('card-2', 'card-5')">2</a></li>            
@@ -453,15 +440,20 @@
                             <li><a class="btn btn-light" id="next" onclick="openPCard('card-6', 'card-5')">NEXT</a></li>                        
                         </ul> 
                         </div>
-                    </div><!-- end project card 4-->  
+                    </div><!-- end project card 5-->  
                     
                     <div id="card-6" class="card-6">
+                        <ul  class="next pr-list up"> 
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-5', 'card-6')">PREVIOUS</a></li>  
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-7', 'card-6')">NEXT</a></li>      
+                        </ul> 
                         <div id="p-card"> 
+                            
                             <div  class="project-tile a">
                                 <div class="window">
                                     <img id="project-pic" src="../pictures/portfolio.jpg"  alt="Portfolio site"/>
                                 </div>                                     
-                                <hr>  Portfolio site
+                                <hr> <div class="title">Portfolio site</div> 
                             <div id="filter">
                                 <a href="#header"  target="_blank">                    
                                 <hr> 
@@ -475,7 +467,7 @@
                                     <div class="window">
                                         <img id="project-pic" src="../pictures/ZahaHadid.jpg"  alt="Architect Zaha Hadid Tribute Page"/>
                                     </div>                                     
-                                    <hr>  Architect Zaha Hadid Tribute Page
+                                    <hr>  <div class="title">Architect Zaha Hadid Tribute Page</div>
                                 <div id="filter">
                                     <a href="https://codepen.io/Zory/full/mdLyNmL"  target="_blank">                    
                                     <hr> 
@@ -488,7 +480,7 @@
                                     <div class="window">
                                         <img id="project-pic" src="../pictures/survey.jpg"  alt="Survey Form"/>
                                     </div>
-                                    <hr> Survey Form
+                                    <hr> <div class="title">Survey Form</div>
                                     <div id="filter">
                                         <a href="https://codepen.io/Zory/full/wvjGjLm" target="_blank">                    
                                         <hr> 
@@ -503,7 +495,7 @@
                            
                 </div> 
                 <div  class="pr-list">
-                    <ul id="row" class="next">
+                    <ul class="next">
                         <li><a class="btn btn-light" id="next" onclick="openPCard('card-5', 'card-6')">PREVIOUS</a></li>   
                         <li><a class="page" onclick="openPCard('card-1', 'card-6')" >1</a></li>            
                         <li><a class="page" onclick="openPCard('card-2', 'card-6')">2</a></li>            
@@ -515,16 +507,20 @@
                         <li><a class="btn btn-light" id="next" onclick="openPCard('card-7', 'card-6')">NEXT</a></li>               
                     </ul> 
                 </div>
-                    </div><!-- end project card 5-->  
+                    </div><!-- end project card 6-->  
 
-                    <div id="card-7" class="card-7">`
-                        <div id="p-card">             
+                    <div id="card-7" class="card-7">
+                        <ul  class="next pr-list up"> 
+                            <li><a class="btn btn-light" id="next" onclick="openPCard('card-6', 'card-7')">PREVIOUS</a></li>  
+                            <li><a class="btn btn-light" id="inv" onclick="openPCard('card-1', 'card-7')">NEXT</a></li>      
+                        </ul> 
+                        <div id="p-card">              
                             <div  class="project-tile a" > 
                                 <div class="window">
                                     <img id="project-pic" src="../pictures/landingPage.jpg"  alt="Landing Page"/>
                                   
                                 </div>  
-                                    <hr> Landing  Page - certification project.
+                                    <hr><div class="title">Landing  Page - certification project.</div> 
                                 <div id="filter">
                                     <a href="https://codepen.io/Zory/full/QWrNQQR" target="_blank">                    
                                     <hr> 
@@ -539,7 +535,7 @@
                                         <img id="project-pic" src="../pictures/Header Parser.jpg"  alt="Header Parser Microservice"/>
                                     </div>         
                                         
-                                        <hr> Header Parser Microservice
+                                        <hr><div class="title">Header Parser Microservice</div> 
                                     <div id="filter">
                                         <a href="https://boilerplate-project-headerparser.zorrey.repl.co/" target="_blank">                    
                                             <hr> 
@@ -553,7 +549,7 @@
                                         <img id="project-pic" src="../pictures/URL Shortener.jpg"  alt="URL Shortener Microservice"/>
                                     </div>               
                                     
-                                        <hr>URL Shortener Microservice
+                                        <hr><div class="title">URL Shortener Microservice</div>
                                     <div id="filter">
                                         <a href="https://boilerplate-project-urlshortener.zorrey.repl.co/" target="_blank">                    
                                         <hr> 
@@ -578,7 +574,7 @@
 
                 </div> 
                 <div  class="pr-list">
-                    <ul id="row" class="next">
+                    <ul class="next">
                         <li><a class="btn btn-light" id="next" onclick="openPCard('card-6', 'card-7')">PREVIOUS</a></li>   
                         <li><a class="page" onclick="openPCard('card-1', 'card-7')" >1</a></li>            
                         <li><a class="page" onclick="openPCard('card-2', 'card-7')">2</a></li>            
@@ -592,34 +588,29 @@
                                         
                     </ul> 
                 </div>
-                    </div><!-- end project card 6-->                     
+                    </div><!-- end project card 6-->      
+                    <div class="space"></div>               
         </section> <!--  end projects -->
-        <!-- <script  src="../public/index.js"></script> -->
-       <!--  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
-    
+     
 <!-- ------------------------ FOOTER --------------------------------->
-    <footer id="footer">    
-        <div id="row">           
-        <address class="author">              
-              <a class="author" id="git-link" href="https://github.com/zorrey" target="_blank">Zory's GitHub</a>
-        </address>
-        <div id="profile">
-            <a class="author" id="profile-link" href="https://codepen.io/Zory" target="_blank">Zory St</a>
-            
-            <a class="author" id="profile-link"  href="https://www.freecodecamp.org/Zory" target="_blank">
-            <img id="fcc" alt="FCC" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg">    
-            my freeCodeCamp profile
+    <footer class="footer">                 
+   
+        <div class="footer-links-row">
+            <a  href="https://codepen.io/Zory" target="_blank">Zory St</a>            
+            <a  href="https://www.freecodecamp.org/Zory" target="_blank">
+            freeCodeCamp profile
             </a>
         </div>                          
-        </div>    
-    <div>
-        <ul id="footer-list">
-            <li><a class="author"  href="https://codepen.io/Zory" target="_blank">Zory St</a></li>
-            <li><a class="author"   href="https://www.freecodecamp.org/Zory" target="_blank">ZS profile</a></li>
-            <li></li>
-        </ul>                  
-    </div> 
-    <button id="ham-footer"> LINKS</button>
+        
+        <div class="drop-down">
+            <button class="ham-footer">LINKS</button>  
+            <ul class="footer-links-col">
+                <li><a class="drop"  href="https://codepen.io/Zory" target="_blank">Zory St</a></li>
+                <li><a class="drop"   href="https://www.freecodecamp.org/Zory" target="_blank">ZS profile</a></li>
+                
+            </ul>                  
+        </div> 
+   
     </footer> 
 </div> <!-- end wrapper-->    
     <script>
@@ -638,52 +629,55 @@
              document.getElementById(name).classList.add("active-list");
         }
         /*-----------------change project page--------------------------------------------*/
+       
         function openPCard(cardNum, prev){
 
            document.getElementById(prev).classList.add("turnOff"); 
            setTimeout(()=>{ document.getElementById(prev).classList.remove("active-c", "turnOff")}, 500 ); 
            setTimeout (()=>{document.getElementById(cardNum).classList.add("active-c")}, 500);                    
         }
+    
         const menuButton = document.getElementById("ham");  
         const footerButton = document.getElementById("ham-footer");  
         const menuList = document.getElementById("menu-column"); 
         const footerList = document.getElementById("footer-list");
 
-        function handleList(){
+    /*     function handleList(){
             w = window.innerWidth;
             h = window.innerHeight;
             if(h<300){
                 footerList.style.right = "125px";
-                menuList.style.height = `${h-45}px`;    
-                menuList.classList.add('show');
+                menuList.style.height = `80px`;    
+                menuList.classList.remove('show');
                 footerList.classList.remove('show-footer');
             }
             if(h>=300 && w<700){
                 footerList.style.right = "0px"; 
-                menuList.style.height = `${h-45}px`;  
-                menuList.classList.add('show');
+                menuList.style.height = `80px`;  
+                menuList.classList.remove('show');
                 footerList.classList.remove('show-footer');
             }
-        }
-        function toggleList(){ 
+        } */
+    /*     function toggleList(){ 
             w = window.innerWidth;
             h = window.innerHeight;
             if(h<300){
                 footerList.style.right = "125px";
                 toggleFooterList;
-                menuList.style.height = `${h-45}px`;    
+                menuList.style.height = `80px`;    
                 menuList.classList.toggle('show'); 
             }
             else{
-            console.log("w-h", w ,h) 
+           // console.log("w-h", w ,h) 
             if(footerList.classList.contains('show-footer')){ 
-                menuList.style.height = `${h-140}px`;    
+                menuList.style.height = `100px`;    
                 menuList.classList.toggle('show');      
             }   else{
-                menuList.style.height = `${h-45}px`;    
+                menuList.style.height = `100px`;    
                 menuList.classList.toggle('show'); 
             }   }
-        }
+        } */
+/*    
         function toggleFooterList(){
 
             w = window.innerWidth;
@@ -697,12 +691,12 @@
             else{
                 footerList.style.right = "0px"  ;
             if(menuList.classList.contains('show') && !footerList.classList.contains("show-footer")){                
-                menuList.style.height = `${h - 140}px`; 
+                menuList.style.height = `${h - 195}px`; 
                 toggleList;          
                 footerList.classList.add('show-footer');      
         }
             else if(menuList.classList.contains('show') && footerList.classList.contains("show-footer")){
-                menuList.style.height = `${h -45}px`;  
+                menuList.style.height = `${h -95}px`;  
                 menuList.classList.toggle('show');           
                 menuList.classList.toggle('show');           
                 document.getElementById("footer-list").classList.remove('show-footer'); 
@@ -710,6 +704,7 @@
             else document.getElementById("footer-list").classList.toggle('show-footer'); 
                  }
         }
+        
         function checkWin(){
              w = window.innerWidth;
              h = window.innerHeight;
@@ -721,6 +716,7 @@
                 toggleList;
             }
         }
+        */
         menuButton.addEventListener('click' , toggleList);
         footerButton.addEventListener('click' , toggleFooterList);   
         window.addEventListener('resize', checkWin);
