@@ -217,6 +217,9 @@ a:hover::after {
     body{
         font-size: 12px;
     }
+        :root{
+    --welcome: 2em;
+}
 }
 /* -----------------------animation---------------------------------- */
 @keyframes fadeIn {
