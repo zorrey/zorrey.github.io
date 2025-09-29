@@ -138,7 +138,7 @@ a:hover::after {
 
 @media screen and (max-width:500px){
     body{
-        font-size: 18px;
+        font-size: 17px;
     }
     .column{
         display:contents;
